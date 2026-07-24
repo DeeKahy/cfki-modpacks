@@ -1,0 +1,13 @@
+name = "child-friendly-keepinventory"
+filename = "child_friendly_keepinventory-1.0.0.jar"
+side = "server"
+
+[download]
+url = "https://cdn.modrinth.com/data/F8ZfCr8o/versions/bCeR7DN9/child_friendly_keepinventory-1.0.0.jar"
+hash-format = "sha512"
+hash = "15b0c29118160c0b324e38e191033a47d27d425c9c83853a16adc23af336f200ecd8b9b37bb040afba9f27bc1ea9209621a72dca808466e0867363a1e2b85b0c"
+
+[update]
+[update.modrinth]
+mod-id = "F8ZfCr8o"
+version = "bCeR7DN9"
