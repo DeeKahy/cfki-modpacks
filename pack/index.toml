@@ -9,6 +9,10 @@ file = "config/antixray.toml"
 hash = "b884257e58364880420c229b4f419dbbff93221abc4d8f8d32b7aadb635f41f2"
 
 [[files]]
+file = "config/tweakeroo.json"
+hash = "4556709a5b5485df41a9d74b263d7cc2477e129b7a46b84590a95354824f96f6"
+
+[[files]]
 file = "mods/anti-xray.pw.toml"
 hash = "1d07aae485a2a92527e66367b656e743ec6e84471296f2f93bee163de3eb5460"
 metafile = true
