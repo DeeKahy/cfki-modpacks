@@ -10,50 +10,45 @@ hash = "b884257e58364880420c229b4f419dbbff93221abc4d8f8d32b7aadb635f41f2"
 
 [[files]]
 file = "mods/anti-xray.pw.toml"
-hash = "1d07aae485a2a92527e66367b656e743ec6e84471296f2f93bee163de3eb5460"
+hash = "9d1afa5a89577bd21da0708c13d66f32224d5f7817451d9c41f5d9b76dcea9b6"
 metafile = true
 
 [[files]]
 file = "mods/carpet.pw.toml"
-hash = "c5ed17434b9f7fa4daa641963566cd3337e1617957d8e77f52d3cb03aafb3b1a"
-metafile = true
-
-[[files]]
-file = "mods/child-friendly-keepinventory.pw.toml"
-hash = "c34ef6d7ca010e6a2afda8bd7676bee9bc0c28f9d9c591ba804737728fd96b0d"
+hash = "fbb61854650a7cdf7eb2244e0599bae2f0541864a9b7cf74f8272972e6bdb18e"
 metafile = true
 
 [[files]]
 file = "mods/chunky.pw.toml"
-hash = "8e4512056e448a6f3d1ac179961eb699c15fbe000284e0aee041b5971b417302"
+hash = "eaa52d6ff1bcb539956d50626085d9185eca346fabcf6b3c176c53192b9958ec"
 metafile = true
 
 [[files]]
 file = "mods/fabric-api.pw.toml"
-hash = "dc5490cc1a9231b0d32ec3e72f9d34279fc1d1ff6fb5a7d288b1f36faec0a6a0"
+hash = "2f5c506d2812eadb4cd6ce2286dc2aafe8a21046d2c1f584a75ca90ea5bd3eeb"
 metafile = true
 
 [[files]]
 file = "mods/floodgate.pw.toml"
-hash = "919d012a47b6b10b087bc1ba96a04292e1161cc188418fe20e37bdb7138e0e40"
+hash = "5e22a9a711566e3db69ea33c99e593ef03141d1476cffc099353e7851896c818"
 metafile = true
 
 [[files]]
 file = "mods/geyser.pw.toml"
-hash = "891683abb9f3722ac8390d1942ddcdf07600f3be70a7a9e498969a735134e081"
+hash = "fa99525a794616e93b3d17e1959d5a0962709656377dc00c2c431134d44bdb7e"
 metafile = true
 
 [[files]]
 file = "mods/lithium.pw.toml"
-hash = "b7e98520b66f5a11f8a4ad84e518de34d97d1ca84152f3a427d9e7820299fbdd"
+hash = "8c7aec9e376eb3f10da62109594e1ac6b7bc92da8e9c080f8f8f5a736051f339"
 metafile = true
 
 [[files]]
 file = "mods/servux.pw.toml"
-hash = "013c8d614115cd07c563eb61ecd5c3ad6902f0b1353f61810d612800e2c0ae12"
+hash = "62144ba5ef95792de9a3331bd7aeda24057eb21514fab45f1d5bcd167bf5152d"
 metafile = true
 
 [[files]]
 file = "mods/spark.pw.toml"
-hash = "c7b6e4a7666e9e64a70df0b550db2e25f7150d4c1c2c2e79e81dfbc036ce3a25"
+hash = "fc9e8b3b78f2b454d260f7cefa26834a352e146cdcfd44a6637544df335087a1"
 metafile = true
