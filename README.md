@@ -1,3 +1,5 @@
+Warning. This entire thing is made with ai. It is not something i am proud of, but i wanted a thing without needing to put weeks of my life into it. And i decided "meh people might need this", so i threw it onto github.
+
 # CFKI Modpacks
 
 Two [packwiz](https://packwiz.infra.link/) packs, published on Modrinth as
