@@ -5,23 +5,34 @@
 set -uo pipefail
 
 FAILED=()
+INCOMPATIBLE=()
 for pack in server client; do
   echo "### $pack"
   cd "$(git rev-parse --show-toplevel)/$pack"
+  mc=$(grep -E '^minecraft *= *' pack.toml | sed 's/.*"\(.*\)"/\1/')
   packwiz refresh
   for f in mods/*.pw.toml; do
     [ -e "$f" ] || continue
     name=$(basename "$f" .pw.toml)
     if ! packwiz update "$name" -y; then
       FAILED+=("$pack/$name")
+      continue
+    fi
+    # packwiz reports "up to date" even when the pinned build doesn't
+    # support this branch's MC version — verify against the Modrinth API.
+    modid=$(grep -E '^mod-id *= *' "$f" | sed 's/.*"\(.*\)"/\1/')
+    [ -n "$modid" ] || continue
+    n=$(curl -sf "https://api.modrinth.com/v2/project/$modid/version?game_versions=%5B%22$mc%22%5D" | jq 'length')
+    if [ "${n:-0}" -eq 0 ]; then
+      INCOMPATIBLE+=("$pack/$name (no build for $mc)")
     fi
   done
   packwiz refresh
 done
 
 report="$(git rev-parse --show-toplevel)/update-report.txt"
-if [ ${#FAILED[@]} -gt 0 ]; then
-  printf 'no compatible update: %s\n' "${FAILED[@]}" | tee "$report"
-else
-  echo "All mods updated cleanly." > "$report"
-fi
+: > "$report"
+[ ${#FAILED[@]} -gt 0 ] && printf 'update failed: %s\n' "${FAILED[@]}" >> "$report"
+[ ${#INCOMPATIBLE[@]} -gt 0 ] && printf 'INCOMPATIBLE, remove or wait for upstream: %s\n' "${INCOMPATIBLE[@]}" >> "$report"
+[ -s "$report" ] || echo "All mods updated cleanly." > "$report"
+cat "$report"
