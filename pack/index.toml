@@ -29,6 +29,11 @@ hash = "fed9bdaac0173f3cab2692f538441afda1e2cd46c6f6363790b424c009e34e03"
 metafile = true
 
 [[files]]
+file = "mods/fabric-language-kotlin.pw.toml"
+hash = "2a760e528bf27c3eb4ae7c06200d91ee9c2849295addaa2add05495c7dee9528"
+metafile = true
+
+[[files]]
 file = "mods/floodgate.pw.toml"
 hash = "02778469a6a4cbb1f21ccbeeed79589b1ee96c23ffecf624e17c920413158dd9"
 metafile = true
@@ -46,6 +51,11 @@ metafile = true
 [[files]]
 file = "mods/item-scroller.pw.toml"
 hash = "5e49ffcfc821c4f7cdf850edb3c82b969eee38f3bf9395877d0106d255e99ac7"
+metafile = true
+
+[[files]]
+file = "mods/ledger.pw.toml"
+hash = "f42bccd25295e6202f16a6e38dbf48ab35e18e01692f58646b6b76213b2648b9"
 metafile = true
 
 [[files]]
