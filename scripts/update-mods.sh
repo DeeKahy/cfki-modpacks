@@ -6,6 +6,8 @@ set -uo pipefail
 
 FAILED=()
 INCOMPATIBLE=()
+READDED=()
+STILL_MISSING=()
 for pack in server client; do
   echo "### $pack"
   cd "$(git rev-parse --show-toplevel)/$pack"
@@ -27,6 +29,21 @@ for pack in server client; do
       INCOMPATIBLE+=("$pack/$name (no build for $mc)")
     fi
   done
+  # mods.txt is the list of mods this pack WANTS. Anything listed but not
+  # present (e.g. pruned at a new-MC-version bump because upstream hadn't
+  # updated yet) is retried here, so it comes back the week its build ships.
+  if [ -f mods.txt ]; then
+    while IFS= read -r slug; do
+      case "$slug" in ''|'#'*) continue;; esac
+      if [ ! -e "mods/$slug.pw.toml" ]; then
+        if packwiz mr add "$slug" -y; then
+          READDED+=("$pack/$slug")
+        else
+          STILL_MISSING+=("$pack/$slug")
+        fi
+      fi
+    done < mods.txt
+  fi
   packwiz refresh
 done
 
@@ -34,5 +51,7 @@ report="$(git rev-parse --show-toplevel)/update-report.txt"
 : > "$report"
 [ ${#FAILED[@]} -gt 0 ] && printf 'update failed: %s\n' "${FAILED[@]}" >> "$report"
 [ ${#INCOMPATIBLE[@]} -gt 0 ] && printf 'INCOMPATIBLE, remove or wait for upstream: %s\n' "${INCOMPATIBLE[@]}" >> "$report"
+[ ${#READDED[@]} -gt 0 ] && printf 'RE-ADDED (build now available): %s\n' "${READDED[@]}" >> "$report"
+[ ${#STILL_MISSING[@]} -gt 0 ] && printf 'wanted but no build yet: %s\n' "${STILL_MISSING[@]}" >> "$report"
 [ -s "$report" ] || echo "All mods updated cleanly." > "$report"
 cat "$report"

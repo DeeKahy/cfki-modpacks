@@ -1,0 +1,11 @@
+fabric-api
+iris
+item-scroller
+litematica
+lithium
+malilib
+minihud
+modmenu
+placeholder-api
+sodium
+tweakeroo
