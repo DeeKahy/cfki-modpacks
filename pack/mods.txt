@@ -3,10 +3,12 @@ carpet
 child-friendly-keepinventory
 chunky
 fabric-api
+fabric-language-kotlin
 floodgate
 geyser
 iris
 item-scroller
+ledger
 litematica
 lithium
 malilib
