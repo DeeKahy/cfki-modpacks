@@ -7,47 +7,53 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
-  check:
-    # Only meaningful from main; a manual dispatch from an mc/* branch
-    # would compare that old version against latest and open a bogus PR.
+  newest:
+    # Schedules only fire from the default branch; this also guards manual
+    # dispatch from other branches.
     if: github.ref_name == github.event.repository.default_branch
     runs-on: ubuntu-latest
+    outputs:
+      branch: ${{ steps.pick.outputs.branch }}
     steps:
-      - uses: actions/checkout@v4 # main = latest-version branch
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - id: pick
+        run: |
+          b=$(git branch -r --format='%(refname:short)' \
+            | sed 's|^origin/||' | grep '^mc/' | sort -V | tail -1)
+          echo "branch=$b" >> "$GITHUB_OUTPUT"
+
+  scaffold:
+    needs: newest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.newest.outputs.branch }}
+      - name: Use tooling from main
+        run: |
+          git fetch --depth=1 origin main
+          git checkout origin/main -- scripts
+          git restore --staged scripts
       - uses: actions/setup-go@v5
         with:
           go-version: stable
       - name: Install packwiz
         run: go install github.com/packwiz/packwiz@latest
-      - name: Snapshot current version as mc/<version> branch
-        id: snapshot
-        run: |
-          current=$(grep -E '^minecraft *= *' server/pack.toml | sed 's/.*"\(.*\)"/\1/')
-          echo "current=$current" >> "$GITHUB_OUTPUT"
       - name: Check for new release and retarget packs
         id: bump
         run: bash scripts/new-mc-version.sh
-      - name: Push snapshot branch for the outgoing version
+      - name: Push mc/<new-version> branch
         if: steps.bump.outputs.version != 'none'
         run: |
-          v="${{ steps.snapshot.outputs.current }}"
-          # Only on the first run for a new release — later daily runs that
-          # refresh the still-open bump PR must not touch the snapshot.
-          if ! git ls-remote --exit-code origin "refs/heads/mc/$v" >/dev/null; then
-            git push origin "refs/remotes/origin/main:refs/heads/mc/$v"
-          fi
-      - name: Open PR for the new version
-        if: steps.bump.outputs.version != 'none'
-        uses: peter-evans/create-pull-request@v6
-        with:
-          branch: mc-bump/${{ steps.bump.outputs.version }}
-          base: main
-          title: "Minecraft ${{ steps.bump.outputs.version }}"
-          commit-message: "Retarget packs at Minecraft ${{ steps.bump.outputs.version }}"
-          body-path: update-report.txt
-          add-paths: |
-            server/**
-            client/**
+          v="${{ steps.bump.outputs.version }}"
+          # keep the version branch's own copy of scripts untouched
+          git restore --source=HEAD --staged --worktree scripts
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add server client
+          git commit -m "Minecraft $v: initial packs (auto-scaffolded from ${{ needs.newest.outputs.branch }})"
+          git push origin "HEAD:refs/heads/mc/$v"

@@ -15,27 +15,33 @@ separate projects:
 
 ## Branch model
 
-- `main` — latest Minecraft release (may be missing mods that haven't
-  updated yet).
-- `mc/<version>` — maintained older versions (e.g. `mc/26.2`).
+- `main` — development branch: scripts, workflows, this README. **No
+  packs.** Workflows always use `main`'s scripts, so tooling fixes land
+  here once — never cherry-pick them to version branches.
+- `mc/<version>` — one branch per Minecraft version, including the
+  latest. A branch always means the same version forever. The packs
+  (`server/`, `client/`) live only on these branches.
 
 ## Automation
 
 - **Update mods** (weekly, or manual dispatch): runs
-  `scripts/update-mods.sh` on `main` and every `mc/*` branch; opens a PR
-  per branch when mods have new builds. Mods with no compatible build are
-  listed in the PR body.
+  `scripts/update-mods.sh` on every `mc/*` branch; opens a PR per branch
+  when mods have new builds.
 - **Scaffold new Minecraft version** (daily): watches Mojang's version
-  manifest; when a new release appears, retargets the packs, updates what
-  it can, and opens a PR against `main`. To promote: merge it, and first
-  create `mc/<old-version>` from the pre-merge `main` so the old version
-  stays maintained.
+  manifest; when a new release appears, it branches `mc/<new>` off the
+  newest existing version branch, retargets the packs, and removes any
+  mod without a compatible build yet — so the new branch launches on day
+  one. Removed mods stay listed in `mods.txt` and the weekly updater
+  re-adds each one as soon as upstream ships a compatible build.
 
 Nothing publishes automatically — review the PR, test-launch, then export
 (`packwiz mr export` in each pack dir) and upload both `.mrpack`s to
 Modrinth tagged with the game version.
 
 ## Local workflow
+
+Always work on a version branch (`git checkout mc/<version>`), never on
+`main`, when touching packs:
 
 ```bash
 cd server   # or client
@@ -46,8 +52,8 @@ packwiz mr export          # build the .mrpack
 ```
 
 `mods.txt` (per pack, per branch) is the list of mods the pack *wants*.
-The weekly update re-adds any wanted mod that's missing — this is how mods
-pruned at a new-MC-version bump come back automatically once upstream
-ships a compatible build. A mod removed with `packwiz remove` but left in
-`mods.txt` will therefore reappear; delete it from `mods.txt` to make a
-removal permanent.
+The weekly update re-adds any wanted mod that's missing and removes
+listed mods that have no build for the branch's MC version (they come
+back automatically once upstream updates). A mod removed with
+`packwiz remove` but left in `mods.txt` will therefore reappear; delete
+it from `mods.txt` to make a removal permanent.
