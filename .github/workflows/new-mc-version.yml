@@ -11,6 +11,9 @@ permissions:
 
 jobs:
   check:
+    # Only meaningful from main; a manual dispatch from an mc/* branch
+    # would compare that old version against latest and open a bogus PR.
+    if: github.ref_name == github.event.repository.default_branch
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # main = latest-version branch
