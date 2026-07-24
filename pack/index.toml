@@ -9,8 +9,12 @@ file = "config/antixray.toml"
 hash = "b884257e58364880420c229b4f419dbbff93221abc4d8f8d32b7aadb635f41f2"
 
 [[files]]
+file = "config/itemscroller.json"
+hash = "248d3fc1cdcbad237cf7cfd0d330d1b6c7f9d876ba56c3c7dbf2fdbeb89a7830"
+
+[[files]]
 file = "config/tweakeroo.json"
-hash = "4556709a5b5485df41a9d74b263d7cc2477e129b7a46b84590a95354824f96f6"
+hash = "8ebf1424dbc868d74eb5de418b21bce3d0a5b1ab77b855a57a6477ff0da0f43c"
 
 [[files]]
 file = "mods/anti-xray.pw.toml"

@@ -1,7 +1,14 @@
 {
+  "TweakToggles": {
+    "tweakShulkerBoxDisplay": true,
+    "tweakToolSwitch": true
+  },
   "TweakHotkeys": {
     "tweakFreeCamera": {
       "keys": "U"
+    },
+    "tweakToolSwitch": {
+      "keys": "N"
     }
   }
 }
