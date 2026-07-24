@@ -5,6 +5,10 @@ on:
     - cron: "30 6 * * *" # daily 06:30 UTC
   workflow_dispatch:
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -15,9 +19,18 @@ jobs:
           go-version: stable
       - name: Install packwiz
         run: go install github.com/packwiz/packwiz@latest
+      - name: Snapshot current version as mc/<version> branch
+        id: snapshot
+        run: |
+          current=$(grep -E '^minecraft *= *' server/pack.toml | sed 's/.*"\(.*\)"/\1/')
+          echo "current=$current" >> "$GITHUB_OUTPUT"
       - name: Check for new release and retarget packs
         id: bump
         run: bash scripts/new-mc-version.sh
+      - name: Push snapshot branch for the outgoing version
+        if: steps.bump.outputs.version != 'none'
+        run: |
+          git push origin "refs/remotes/origin/main:refs/heads/mc/${{ steps.snapshot.outputs.current }}"
       - name: Open PR for the new version
         if: steps.bump.outputs.version != 'none'
         uses: peter-evans/create-pull-request@v6
