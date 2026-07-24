@@ -16,9 +16,9 @@ Every mod is tagged client or server, so launchers only install the client mods 
 
 **On the client:** Sodium, Iris with two included shaderpacks (off by default), Tweakeroo, Item Scroller, MiniHUD, Litematica, Mod Menu.
 
-**On the server:** Carpet, Servux (feeds MiniHUD and Litematica), AntiXray preconfigured for the overworld and the nether, Geyser and Floodgate for Bedrock crossplay on the Java port, [Child Friendly Keep Inventory](https://modrinth.com/mod/child-friendly-keepinventory) for per-player keepInventory, spark, Chunky.
+**On the server:** Carpet, Servux (feeds MiniHUD and Litematica), AntiXray preconfigured for the overworld and the nether, Geyser and Floodgate for Bedrock crossplay on the Java port, [Child Friendly Keep Inventory](https://modrinth.com/mod/child-friendly-keepinventory) for per-player keepInventory, Ledger for grief logging and rollback, spark, Chunky.
 
-**Both:** Fabric API, Lithium.
+**Both:** Fabric API, Lithium, Fabric Language Kotlin.
 
 **Bedrock players** join with the same address and port as Java players. Phones and Windows work directly; consoles need a workaround like BedrockConnect because they can't enter a custom port. Bedrock players don't need a Java account.
 

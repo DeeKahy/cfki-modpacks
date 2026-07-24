@@ -45,6 +45,7 @@ Shaders are opt-in: Options, Video Settings, Shader Packs. Players on weak machi
 | [AntiXray](https://modrinth.com/mod/anti-xray) | Hides ores from xray clients, config included |
 | [spark](https://modrinth.com/mod/spark) | Performance profiler for when TPS drops |
 | [Chunky](https://modrinth.com/mod/chunky) | Pregenerate the world so exploring doesn't lag |
+| [Ledger](https://modrinth.com/mod/ledger) | Logs block changes and item movement, with rollback: who broke what, when |
 
 ### Both sides
 
@@ -52,6 +53,7 @@ Shaders are opt-in: Options, Video Settings, Shader Packs. Players on weak machi
 | --- | --- |
 | [Fabric API](https://modrinth.com/mod/fabric-api) | Required by nearly everything |
 | [Lithium](https://modrinth.com/mod/lithium) | Faster game ticks (on the client this only matters in singleplayer) |
+| [Fabric Language Kotlin](https://modrinth.com/mod/fabric-language-kotlin) | Library that Ledger needs |
 
 ### Missing mods on some versions
 
