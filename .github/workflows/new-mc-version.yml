@@ -33,7 +33,12 @@ jobs:
       - name: Push snapshot branch for the outgoing version
         if: steps.bump.outputs.version != 'none'
         run: |
-          git push origin "refs/remotes/origin/main:refs/heads/mc/${{ steps.snapshot.outputs.current }}"
+          v="${{ steps.snapshot.outputs.current }}"
+          # Only on the first run for a new release — later daily runs that
+          # refresh the still-open bump PR must not touch the snapshot.
+          if ! git ls-remote --exit-code origin "refs/heads/mc/$v" >/dev/null; then
+            git push origin "refs/remotes/origin/main:refs/heads/mc/$v"
+          fi
       - name: Open PR for the new version
         if: steps.bump.outputs.version != 'none'
         uses: peter-evans/create-pull-request@v6
