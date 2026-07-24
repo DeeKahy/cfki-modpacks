@@ -58,5 +58,4 @@ jobs:
           commit-message: "Update mods (${{ matrix.branch }})"
           body-path: update-report.txt
           add-paths: |
-            server/**
-            client/**
+            pack/**

@@ -7,7 +7,7 @@
 set -euo pipefail
 
 latest=$(curl -sf https://piston-meta.mojang.com/mc/game/version_manifest_v2.json | jq -r '.latest.release')
-current=$(grep -E '^minecraft *= *' server/pack.toml | sed 's/.*"\(.*\)"/\1/')
+current=$(grep -E '^minecraft *= *' pack/pack.toml | sed 's/.*"\(.*\)"/\1/')
 
 out=${GITHUB_OUTPUT:-/dev/stdout}
 if [ "$latest" = "$current" ] || git ls-remote --exit-code origin "refs/heads/mc/$latest" >/dev/null 2>&1; then
@@ -18,7 +18,7 @@ fi
 loader=$(curl -sf https://meta.fabricmc.net/v2/versions/loader | jq -r '.[0].version')
 echo "New Minecraft release: $latest (fabric loader $loader)"
 
-for pack in server client; do
+for pack in pack; do
   sed -i.bak -E "s/^minecraft *=.*/minecraft = \"$latest\"/; s/^fabric *=.*/fabric = \"$loader\"/" "$pack/pack.toml"
   rm "$pack/pack.toml.bak"
 done

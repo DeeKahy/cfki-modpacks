@@ -9,7 +9,7 @@ INCOMPATIBLE=()
 REMOVED=()
 READDED=()
 STILL_MISSING=()
-for pack in server client; do
+for pack in pack; do
   echo "### $pack"
   cd "$(git rev-parse --show-toplevel)/$pack"
   mc=$(grep -E '^minecraft *= *' pack.toml | sed 's/.*"\(.*\)"/\1/')
