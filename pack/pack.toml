@@ -1,4 +1,4 @@
-name = "CFKI Client"
+name = "CFKI"
 author = "DeeKahy"
 version = "1.0.0"
 pack-format = "packwiz:1.1.0"
@@ -6,7 +6,7 @@ pack-format = "packwiz:1.1.0"
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "e8c5fbbdf1e7c3315d5bbc6deabe17067c6cd0c6f730657e0b1c8f5a4bd04886"
+hash = "8175c2dfdf195c5c2844431501733b7cccedbc96a5b08c6a8007c9035f5e9600"
 
 [versions]
 fabric = "0.19.3"

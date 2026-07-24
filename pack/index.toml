@@ -1,8 +1,41 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/Geyser-Fabric/config.yml"
+hash = "6e283e7a85a0681fe5f4f78d96e6a077ff9222688fd30baec702ba9e2e7c6905"
+
+[[files]]
+file = "config/antixray.toml"
+hash = "b884257e58364880420c229b4f419dbbff93221abc4d8f8d32b7aadb635f41f2"
+
+[[files]]
+file = "mods/anti-xray.pw.toml"
+hash = "1d07aae485a2a92527e66367b656e743ec6e84471296f2f93bee163de3eb5460"
+metafile = true
+
+[[files]]
+file = "mods/carpet.pw.toml"
+hash = "fed6e68eacfd81206e9058b6f5532f3f3feb7bf682ae435b4828c68101784a03"
+metafile = true
+
+[[files]]
+file = "mods/chunky.pw.toml"
+hash = "8e4512056e448a6f3d1ac179961eb699c15fbe000284e0aee041b5971b417302"
+metafile = true
+
+[[files]]
 file = "mods/fabric-api.pw.toml"
 hash = "fed9bdaac0173f3cab2692f538441afda1e2cd46c6f6363790b424c009e34e03"
+metafile = true
+
+[[files]]
+file = "mods/floodgate.pw.toml"
+hash = "02778469a6a4cbb1f21ccbeeed79589b1ee96c23ffecf624e17c920413158dd9"
+metafile = true
+
+[[files]]
+file = "mods/geyser.pw.toml"
+hash = "e1e3f6944fdce43831d5dcf4b7829fec776adddfb8b824ff59de965f7db93e73"
 metafile = true
 
 [[files]]
@@ -46,8 +79,18 @@ hash = "d20369e5848ca31ecbb49bae22e953439173bd4617ca239b23335366b2a6a0e9"
 metafile = true
 
 [[files]]
+file = "mods/servux.pw.toml"
+hash = "10cf7fc852fa74ba96a9a950eb54d6eca2a8d53f103b957e574bd22bd45c4694"
+metafile = true
+
+[[files]]
 file = "mods/sodium.pw.toml"
 hash = "c75f5e9a285cf6195065ba85e73081990f990de6efc7e2262a6eafe12d3dc277"
+metafile = true
+
+[[files]]
+file = "mods/spark.pw.toml"
+hash = "c7b6e4a7666e9e64a70df0b550db2e25f7150d4c1c2c2e79e81dfbc036ce3a25"
 metafile = true
 
 [[files]]
