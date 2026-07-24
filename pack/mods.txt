@@ -1,4 +1,10 @@
+anti-xray
+carpet
+child-friendly-keepinventory
+chunky
 fabric-api
+floodgate
+geyser
 iris
 item-scroller
 litematica
@@ -7,5 +13,7 @@ malilib
 minihud
 modmenu
 placeholder-api
+servux
 sodium
+spark
 tweakeroo
