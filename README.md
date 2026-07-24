@@ -39,7 +39,15 @@ Modrinth tagged with the game version.
 
 ```bash
 cd server   # or client
-packwiz mr add <slug>      # add a mod
+packwiz mr add <slug>      # add a mod — ALSO add the slug to mods.txt
+packwiz remove <slug>      # remove a mod — ALSO delete it from mods.txt
 packwiz update --all       # update within this branch's MC version
 packwiz mr export          # build the .mrpack
 ```
+
+`mods.txt` (per pack, per branch) is the list of mods the pack *wants*.
+The weekly update re-adds any wanted mod that's missing — this is how mods
+pruned at a new-MC-version bump come back automatically once upstream
+ships a compatible build. A mod removed with `packwiz remove` but left in
+`mods.txt` will therefore reappear; delete it from `mods.txt` to make a
+removal permanent.
