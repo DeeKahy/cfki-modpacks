@@ -65,7 +65,7 @@ metafile = true
 
 [[files]]
 file = "mods/lithium.pw.toml"
-hash = "cd37520fbb14b8d5e9471d8c25324736e02dcf3be4b7c5df1699757b2264049f"
+hash = "ff3b8e19820888b63a129f5c5769a1671bda1e1376de0deb216c6862f0feca2d"
 metafile = true
 
 [[files]]
@@ -95,7 +95,7 @@ metafile = true
 
 [[files]]
 file = "mods/sodium.pw.toml"
-hash = "c75f5e9a285cf6195065ba85e73081990f990de6efc7e2262a6eafe12d3dc277"
+hash = "29d554075cdcdff3a9708bd937672874989247d5275d2be3c8938295ce87bfdd"
 metafile = true
 
 [[files]]
