@@ -45,7 +45,7 @@ metafile = true
 
 [[files]]
 file = "mods/iris.pw.toml"
-hash = "41c95eea2813a8fe923ef8033f084cb264c610f549c97bb58db64734c9703c0c"
+hash = "19e74f770611dabc1bd0713f3a7622abd65b4aaca6b37282135e8fb462630f2d"
 metafile = true
 
 [[files]]
@@ -60,22 +60,22 @@ metafile = true
 
 [[files]]
 file = "mods/litematica.pw.toml"
-hash = "74ceb2fb26577fcd4fe6ffcc8411aaa9ee754e2f34edbe4aa4d4ad752176c379"
+hash = "91571eae628fa8036a790427dcf49774013199cf3809faec85c40996bec5b61b"
 metafile = true
 
 [[files]]
 file = "mods/lithium.pw.toml"
-hash = "cd37520fbb14b8d5e9471d8c25324736e02dcf3be4b7c5df1699757b2264049f"
+hash = "ff3b8e19820888b63a129f5c5769a1671bda1e1376de0deb216c6862f0feca2d"
 metafile = true
 
 [[files]]
 file = "mods/malilib.pw.toml"
-hash = "2ab016778787b807a892102b00286346b72cb950d52a63095ce59be63177ce0c"
+hash = "0e7a7e79546754fbf47a6442a804042941dfae20e7ea611c50ee41335ed1854d"
 metafile = true
 
 [[files]]
 file = "mods/minihud.pw.toml"
-hash = "c6c8a308ea0716492e599be63ac94e806789215a40186b8d880f293aa7462d31"
+hash = "cb4e621e9e5beebccbdee05a16ae31118aab5e13344921551567ad751ad8cc37"
 metafile = true
 
 [[files]]
@@ -90,12 +90,12 @@ metafile = true
 
 [[files]]
 file = "mods/servux.pw.toml"
-hash = "10cf7fc852fa74ba96a9a950eb54d6eca2a8d53f103b957e574bd22bd45c4694"
+hash = "1ceb1e646783c34d86d68aeac025527d5bc087719843de609758eb75b581f70f"
 metafile = true
 
 [[files]]
 file = "mods/sodium.pw.toml"
-hash = "c75f5e9a285cf6195065ba85e73081990f990de6efc7e2262a6eafe12d3dc277"
+hash = "70025df2a0bd177a43d720d1450d0d00ee88114bf18a25c83b1907d798fcf64f"
 metafile = true
 
 [[files]]
@@ -105,7 +105,7 @@ metafile = true
 
 [[files]]
 file = "mods/tweakeroo.pw.toml"
-hash = "4295e14e6d11ca0884a52ed65b2435546ff5f323961afba5563e1e8aaca4cf70"
+hash = "cfc9c569c500dcf41c03712d6be8479af162d28c93f180bfbb04413279697bba"
 metafile = true
 
 [[files]]
