@@ -50,7 +50,7 @@ metafile = true
 
 [[files]]
 file = "mods/item-scroller.pw.toml"
-hash = "5e49ffcfc821c4f7cdf850edb3c82b969eee38f3bf9395877d0106d255e99ac7"
+hash = "1857d5516c88a01e61678b4010c161876a15159187edffe7cff54397a0626243"
 metafile = true
 
 [[files]]
@@ -60,7 +60,7 @@ metafile = true
 
 [[files]]
 file = "mods/litematica.pw.toml"
-hash = "91571eae628fa8036a790427dcf49774013199cf3809faec85c40996bec5b61b"
+hash = "cd41dd035ddf0ee9407e6ca86e9482e19a41a5fa75bf91b87d39cb8e9a430cfa"
 metafile = true
 
 [[files]]
@@ -70,12 +70,12 @@ metafile = true
 
 [[files]]
 file = "mods/malilib.pw.toml"
-hash = "0e7a7e79546754fbf47a6442a804042941dfae20e7ea611c50ee41335ed1854d"
+hash = "ec8c87c80cd326d2aba4ce2fd4870d497c4f5934c15ed1ff562c4e3ce90e55ef"
 metafile = true
 
 [[files]]
 file = "mods/minihud.pw.toml"
-hash = "cb4e621e9e5beebccbdee05a16ae31118aab5e13344921551567ad751ad8cc37"
+hash = "d0c854ea209f718b056653f743df9b895882a658cc855c0d7b512dd4c8ea4f49"
 metafile = true
 
 [[files]]
@@ -90,12 +90,12 @@ metafile = true
 
 [[files]]
 file = "mods/servux.pw.toml"
-hash = "1ceb1e646783c34d86d68aeac025527d5bc087719843de609758eb75b581f70f"
+hash = "5941da70b6e4512486d8b86ca5f9228d1a01a20963252ff2b27666ba495e0e41"
 metafile = true
 
 [[files]]
 file = "mods/sodium.pw.toml"
-hash = "70025df2a0bd177a43d720d1450d0d00ee88114bf18a25c83b1907d798fcf64f"
+hash = "8532ef1557ef154dc93177fef2d61df8debd8f4def08142a7ac41d0416e4b12f"
 metafile = true
 
 [[files]]
@@ -105,7 +105,7 @@ metafile = true
 
 [[files]]
 file = "mods/tweakeroo.pw.toml"
-hash = "cfc9c569c500dcf41c03712d6be8479af162d28c93f180bfbb04413279697bba"
+hash = "7ff42ec0ba00de73b3fe8599d660bca19edb3961434eda0b1e97dd1c5f914e24"
 metafile = true
 
 [[files]]
