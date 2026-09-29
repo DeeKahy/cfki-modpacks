@@ -53,7 +53,7 @@ metafile = true
 
 [[files]]
 file = "mods/geyser.pw.toml"
-hash = "7b590cce66567b8d56f6bc259dffaaf3214dab4e2f26a13fa43e478403b80868"
+hash = "dcdcdd4daca5b3234fb78fe589e3fcaf5967f44a4f41e0ed2ee99ad1a7cd225f"
 metafile = true
 
 [[files]]
@@ -93,7 +93,7 @@ metafile = true
 
 [[files]]
 file = "mods/modmenu.pw.toml"
-hash = "fa00f7dbf48bbcf6940248d3fd3629f43656c54006cc63d5560f9ca77ccd97a9"
+hash = "dc9906e45919f5b3a31e3d5582cd97bdd7534f56c2a5e730b9de41875a97e1eb"
 metafile = true
 
 [[files]]
