@@ -48,7 +48,7 @@ metafile = true
 
 [[files]]
 file = "mods/iris.pw.toml"
-hash = "1f5c464b85f8ca75424eee7d6e9d5c0a706fe787e399c2dea1071a37a27dc24d"
+hash = "3af2426b8d83a5fcda1ff6de2035d53bcff532653c196f2ea6d7647995e45131"
 metafile = true
 
 [[files]]
@@ -58,7 +58,7 @@ metafile = true
 
 [[files]]
 file = "mods/ledger.pw.toml"
-hash = "cdd1af417364e1ef868aca009d23303a64f38b7d58d43d8e4c4ab58e7558c1e5"
+hash = "264b4030e5717d50ebd215bffeb2e5fa138dc255ed57cbd47f99fd0a69595af3"
 metafile = true
 
 [[files]]
