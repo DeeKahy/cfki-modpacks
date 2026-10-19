@@ -10,7 +10,7 @@ hash = "b884257e58364880420c229b4f419dbbff93221abc4d8f8d32b7aadb635f41f2"
 
 [[files]]
 file = "mods/anti-xray.pw.toml"
-hash = "1d07aae485a2a92527e66367b656e743ec6e84471296f2f93bee163de3eb5460"
+hash = "595ff9b19f76efddc2656c7854f94450aa6ca0d468e971ba60b3bb7d6d3c9ca5"
 metafile = true
 
 [[files]]
@@ -30,7 +30,7 @@ metafile = true
 
 [[files]]
 file = "mods/fabric-language-kotlin.pw.toml"
-hash = "7a7f5673b6e33eebaed00c0c453fc41d11c7474eb320c3ce8736d415fcfe2682"
+hash = "1811d49906aa7a1e7f1230535c6fec91be45129d028f7900cf35571a497e42b3"
 metafile = true
 
 [[files]]
