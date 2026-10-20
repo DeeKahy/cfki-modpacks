@@ -18,7 +18,7 @@ hash = "8ebf1424dbc868d74eb5de418b21bce3d0a5b1ab77b855a57a6477ff0da0f43c"
 
 [[files]]
 file = "mods/anti-xray.pw.toml"
-hash = "1a11c018eccd7cc4c5c59087ffd50a35a225bd6ac7e69fc2f7903067858bf5c4"
+hash = "94051e9e2d5e0b9d8ac78380f6170bfdfa6b254ecb855396e1acad8811da5105"
 metafile = true
 
 [[files]]
@@ -33,17 +33,22 @@ metafile = true
 
 [[files]]
 file = "mods/fabric-api.pw.toml"
-hash = "6b342a83e9736f0832e750c8d631273cf600305d73b32c8bd6a977811f6972ee"
+hash = "6dae83195be2f55ba9d38d72bb0da399f8e90b60f70fb4d792820c4f0b1bac43"
 metafile = true
 
 [[files]]
 file = "mods/fabric-language-kotlin.pw.toml"
-hash = "7a7f5673b6e33eebaed00c0c453fc41d11c7474eb320c3ce8736d415fcfe2682"
+hash = "1811d49906aa7a1e7f1230535c6fec91be45129d028f7900cf35571a497e42b3"
 metafile = true
 
 [[files]]
 file = "mods/floodgate.pw.toml"
 hash = "0673db3ecd0d63d465295bde93d1b5c938ea563cf1942daf4908802874b21b58"
+metafile = true
+
+[[files]]
+file = "mods/geyser.pw.toml"
+hash = "3b62b83180e640b6a6b55249661d696204857f8a9e6b0779f42bb6d26071b670"
 metafile = true
 
 [[files]]
@@ -98,7 +103,7 @@ metafile = true
 
 [[files]]
 file = "mods/sodium.pw.toml"
-hash = "95b014c29351598261257614a55955215bba353a93593b2050cb07da295d3302"
+hash = "0bf314c578473659bd89915114cac8e60994988f405218726a48d35b06e9316c"
 metafile = true
 
 [[files]]
