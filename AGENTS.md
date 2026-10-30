@@ -1,4 +1,4 @@
-# CLAUDE.md
+# AGENTS.md
 
 Technical Vanilla: a Fabric modpack maintained with packwiz, published on
 Modrinth as one combined client+server pack.
