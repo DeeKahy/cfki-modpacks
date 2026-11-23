@@ -33,7 +33,7 @@ metafile = true
 
 [[files]]
 file = "mods/fabric-api.pw.toml"
-hash = "fb72a70cb53c63f1da4520c25c8a7d806cc1c733e827016615623b65d751852d"
+hash = "d8561ff9c3bd2eeb7bb8121241f126c33725734719dcb4973bedeb97750260f8"
 metafile = true
 
 [[files]]
@@ -48,7 +48,7 @@ metafile = true
 
 [[files]]
 file = "mods/geyser.pw.toml"
-hash = "86d106472af0b4ea77cb80ef52bf3484d052745fe7f2d2b0b746f12ad8c6eb16"
+hash = "a4cff1a5d6b77cb72455d7f844e64865ea2883444e58f52487c01e1b81b76513"
 metafile = true
 
 [[files]]
@@ -73,7 +73,7 @@ metafile = true
 
 [[files]]
 file = "mods/lithium.pw.toml"
-hash = "b44f3ab71e52f1aaae97cf8644f2316042de8b7777d6b6794567c8c7d220bd2b"
+hash = "bae28aaf888e212a4310264a51e585aa252051fcc2467c309670c7786b923ee5"
 metafile = true
 
 [[files]]
@@ -103,7 +103,7 @@ metafile = true
 
 [[files]]
 file = "mods/sodium.pw.toml"
-hash = "d1818a0dd36e725449fbc8ec9e48b4a276d6c3a6e5761ec9646f53cae3504c62"
+hash = "f92dd3c24c5b62edbc368a540769ea82f88e97a5759eaffda011d045b1bf4be2"
 metafile = true
 
 [[files]]
